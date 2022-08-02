@@ -17,7 +17,7 @@ let Login = ()=>{
                 </div>
 
                 <div className='input-box'>
-                    <input type="text" placeholder='비밀번호를 입력해주세요'/>
+                    <input type="password" placeholder='비밀번호를 입력해주세요'/>
                 </div>
 
                 <div className='login-box'>
