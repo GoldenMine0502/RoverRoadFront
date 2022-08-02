@@ -1,0 +1,59 @@
+.Index{
+    width:100%;
+    height:100%;
+
+    overflow: hidden;
+}
+
+.Index .image-box{
+    width:100%;
+    height:85%;
+    background-image: url('../image/indexBackground.svg');
+    background-size:cover;
+}
+
+.Index .image-box img{
+    margin-left:20px;
+    margin-top:40px;
+    width:140px;
+}
+
+.Index .btn-box{
+    width: 100%;
+    height:15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Index .btn-box div{
+    width:150px;
+    height:50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 16px;
+
+    box-shadow: 3px 3px 3px rgb(245,245,245);
+
+    cursor:pointer;
+    user-select: none;
+    
+}
+
+.Index .btn-box .login-btn{
+    background-color:#F0F0F0;
+    color:#1C1B1F;
+}
+
+.Index .btn-box .register-btn{
+    background-color: #5278FF;
+    color:#FFFFFF;
+}
