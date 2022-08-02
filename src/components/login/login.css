@@ -1,0 +1,86 @@
+.Login{
+    width:100%;
+    height:100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Login .data{
+    width:100%;
+    height:auto;
+}
+
+.Login .data .logo-box{
+    width:100%;
+    height:150px;
+}
+
+.Login .data .logo-box img{
+    width:150px;
+    margin-left:2em;
+    margin-top:3em
+}
+
+.Login .data .input-box{
+    width:calc(100% - 4em);
+    height:40px;
+    
+    margin:auto;
+    margin-bottom:30px;
+
+}
+
+.Login .data .input-box > input{
+    width: calc(100% - 10px);
+    height:100%;
+
+    padding-left:10px;
+
+    font-family: 'SUIT';
+    font-size:14px;
+    font-weight:600;
+
+    border:1px solid #CDCDCD;
+}
+
+.Login .data .login-box{
+    width:calc(100% - 4em + 2px);
+    height:50px;
+    
+    margin:auto;
+}
+
+.Login .data .login-box .login-btn{
+    width: 100%;
+    height:100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #5278FF;
+    color:#fff;
+
+    font-family: 'SUIT';
+    font-size:18px;
+    font-weight:700;
+
+    border-radius: 5px;
+    border:1px solid #5278FF;
+}
+
+.Login .register{
+    width:100%;
+    height:100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color:#5278FF;
+    font-family: 'SUIT';
+    font-weight:500;
+    font-size:16px;
+}
