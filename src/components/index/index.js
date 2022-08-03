@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import Logo from '../image/indexLogo.svg';
 import './index.css'
@@ -11,9 +12,9 @@ let Index = ()=>{
             </div>
 
             <div className='btn-box'>
-                <div className='login-btn'>로그인</div>
+                <Link to="/login"><div className='login-btn'>로그인</div></Link>
 
-                <div className='register-btn'>회원가입</div>
+                <Link to="/register"><div className='register-btn'>회원가입</div></Link>
             </div>
         </div>
     );

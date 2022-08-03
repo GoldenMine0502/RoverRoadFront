@@ -21,7 +21,7 @@ let Login = ()=>{
                 </div>
 
                 <div className='login-box'>
-                    <div className='login-btn'>로그인</div>
+                    <div className='login-btn'><Link to="/main/post">로그인</Link></div>
                 </div>
             </div>
 

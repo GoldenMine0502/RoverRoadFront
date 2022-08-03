@@ -1,0 +1,83 @@
+.Main{
+    width:100vw;
+    height:100vh;
+}
+
+.View{
+    width:100%;
+    height:calc(100% - 90px);
+    overflow-y: auto;
+}
+
+.View .logo-box{
+    width:100%;
+    height:150px;
+    display: flex;
+    align-items: center;
+}
+
+.View .logo-box img{
+    margin-left:2em;
+}
+
+.View .space{
+    width:100%;
+    height:100px;
+}
+
+.PostBox{
+    width:calc(100% - 4em);
+    height:auto;
+    padding-top:20px;
+
+    margin:auto;
+    margin-top:50px;
+
+    border-radius:5px;
+    box-shadow: 5px 10px 5px 5px rgb(230,230,230);
+    border:1px solid #D8D8D8;
+
+    user-select: none;
+    cursor:pointer;
+}
+
+.PostBox a{
+    text-decoration: none;
+}
+
+.PostBox a .text-box{
+    width:100%;
+    height:auto;
+
+}
+
+.PostBox a .text-box h2{
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:24px;
+    color:#5278FF;
+    margin-bottom:10px;
+    margin-left:20px;
+}
+
+.PostBox a .text-box p{
+    width:calc(100% - 40px);
+    margin-left:20px;
+    font-family: 'SUIT';
+    font-weight:500;
+    color:#000000;
+    font-size:14px;
+    word-break: keep-all;
+}
+
+.PostBox a .image-box{
+    width:100%;
+    height:auto;
+}
+
+.PostBox a div img{
+    width:100%;
+    margin-top:15px;
+    border-radius:0px 0px 5px 5px;
+    display: block;
+}

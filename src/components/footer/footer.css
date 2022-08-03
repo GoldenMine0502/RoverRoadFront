@@ -1,0 +1,59 @@
+.Footer{
+    width:100%;
+    height:90px;
+
+    position: fixed;
+    bottom:0;
+    z-index:999;
+
+    display: flex;
+    align-items: center;
+    
+    border-top:1px solid rgb(230,230,230);
+    box-shadow: 10px 10px 10px 15px rgb(230,230,230);
+    background-color:#fff;
+}
+.Footer div{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+
+.Footer div a{
+    width:20%;
+    height:100%;
+
+    text-decoration: none;
+    user-select:none;
+    cursor:pointer;
+}
+
+.Footer div a div{
+    width:100%;
+    height:auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer div a div .profile{
+    border-radius: 100%;
+}
+
+.Footer div a div img{
+    width:25px;
+    margin-top:20px;
+}
+
+.Footer div a div p{
+    font-family: 'SUIT';
+    font-size:14px;
+    font-weight:500;
+    color:#979797;
+    margin-top:5px;
+} 
+
+.Footer div a .blue p{
+    color:#5278FF;
+}
