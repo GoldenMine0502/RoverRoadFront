@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import GuiderThumbnail from './module/guiderThumbnail';
+
 import './guide.css';
 
 let Guide = ()=>{
@@ -22,7 +24,10 @@ let Guide = ()=>{
                 </select>
             </div>
 
+            <GuiderThumbnail></GuiderThumbnail>
             
         </div>
     );
 }
+
+export default Guide;
