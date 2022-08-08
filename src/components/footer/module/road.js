@@ -37,7 +37,7 @@ let RoadModule = ()=>{
             <Link to="/main/my">
                 <div className="content">
                     <img className="profile" src={Profile}/>
-                    <p>저널</p>
+                    <p>MY</p>
                 </div>
             </Link>
         </div>

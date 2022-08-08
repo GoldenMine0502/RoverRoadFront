@@ -37,7 +37,7 @@ let PostModule = ()=>{
             <Link to="/main/my">
                 <div className="content blue">
                     <img className="profile" src={Profile}/>
-                    <p>저널</p>
+                    <p>MY</p>
                 </div>
             </Link>
         </div>
