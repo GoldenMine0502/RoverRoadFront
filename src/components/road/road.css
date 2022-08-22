@@ -99,3 +99,151 @@
     margin-top:5px;
     color:rgba(0, 0, 0, 0.5);
 }
+
+
+.AddRoad{
+    width:100vw;
+    height:100vh;
+
+    position: absolute;
+    z-index:99999;
+    top:0;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.AddRoad .add-box{
+    position: fixed;
+    bottom:0;
+
+    width:100%;
+    height:250px;
+
+    border-radius: 20px 20px 0 0;
+
+    background-color:#fff;
+}
+
+.AddRoad .add-box .title{
+    margin-left:20px;
+    margin-top:20px;
+
+    font-family: 'SUIT';
+    font-size:32px;
+    font-weight:700;
+
+    color:rgba(28, 27, 31, 1);
+}
+
+.AddRoad .add-box .subtitle{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:20px;
+
+    font-family: 'SUIT';
+    font-size:16px;
+    font-weight:400;
+}
+
+.AddRoad .add-box .line{
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    width:calc(100% - 40px);
+    height:1px;
+
+    margin:auto;
+}
+
+.AddRoad .add-box .select-box{
+    width:calc(100% - 40px);
+    height:50px;
+
+    display: flex;
+    align-items: center;
+
+    user-select: none;
+    cursor:pointer;
+
+    margin:auto;
+}
+
+.AddRoad .add-box .select-box img{
+    width:20px;
+}
+
+.AddRoad .add-box .select-box h2{
+    margin-left:20px;
+
+    font-size:16px;
+    font-weight:600;
+    font-family: 'SUIT';
+}
+
+.Thumbnail{
+    width:calc(100% - 40px);
+    height:80px;
+
+    margin:auto;
+    margin-top:20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Thumbnail .thumbnail-time{
+    font-size:10px;
+    font-weight:700;
+    font-family: 'SUIT';
+    color:rgba(114, 114, 114, 1);
+
+    margin-right:10px;
+}
+
+.Thumbnail .thumbnail-image{
+    width:50px;
+    height:50px;
+    
+    border-radius: 100%;
+}
+.Thumbnail .data-box{
+    width:calc(100% - 120px);
+    height:auto;
+
+    margin-left:10px;
+}
+.Thumbnail .data-box .title-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Thumbnail .data-box .title-box h2{
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:15px;
+    color:rgba(47, 47, 47, 1);
+}
+
+.Thumbnail .data-box .title-box p{
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:13px;
+    color:rgba(255, 158, 89, 1);
+}
+
+.Thumbnail .data-box .text-box h2{
+    color:rgba(114, 114, 114, 1);
+    font-family: 'SUIT';
+    font-weight:500;
+    font-size:12px;
+    margin-top:10px;
+}
+
+.Thumbnail .data-box .text-box p{
+    font-family: 'SUIT';
+    font-weight:500;
+    font-size:10px;
+    color:rgba(0, 132, 254, 1);
+
+    margin-top:5px;
+}

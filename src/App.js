@@ -8,6 +8,7 @@ import Login from './components/login/login';
 import Register from './components/register/register';
 import Main from './components/main/main';
 import Article from './components/article/article';
+import RoadThumbnail from './components/road/module/roadThumbnail/roadThumbnail';
 
 let App = ()=>{
   return(
@@ -18,6 +19,7 @@ let App = ()=>{
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
           <Route path="/main/*" element={<Main/>}></Route>
+          <Route path="/main/road/list" element={<RoadThumbnail/>}></Route>
           <Route path="/article" element={<Article/>}></Route>
         </Routes>
       </div>

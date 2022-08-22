@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import TripThumbnail from './module/tripThumbnail'
+import TripThumbnail from './module/tripThumbnail';
+import AddRoad from './module/addRoad';
 
 import './road.css';
 import AppBar from '../image/appBar.svg';
@@ -10,7 +11,7 @@ let Road = ()=>{
     return(
         <div className='Road'>
             <div className='app-bar'>
-                <Link to="/main/road">
+                <Link to="/main/road/add">
                     <img src={AppBar}/>
                 </Link>
             </div> 
@@ -38,6 +39,8 @@ let Road = ()=>{
             <TripThumbnail/>
 
             <div className='space'></div>
+
+            <AddRoad/>
         </div>
     );
 }

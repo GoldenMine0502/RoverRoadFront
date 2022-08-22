@@ -7,6 +7,7 @@ import Road from "../road/road";
 import Guide from '../guide/guide';
 import GuideDetail from '../guide/module/detail/detail';
 import MyPage from "../myPage/mypage";
+import RoadThumbnail from '../road/module/roadThumbnail/roadThumbnail';
 
 import Logo from '../image/logo.svg';
 import './main.css';
