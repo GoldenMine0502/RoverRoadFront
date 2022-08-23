@@ -10,6 +10,7 @@ import Main from './components/main/main';
 import Article from './components/article/article';
 import RoadThumbnail from './components/road/module/roadThumbnail/roadThumbnail';
 import Search from './components/road/module/search/search';
+import RoadDetail from './components/road/module/detail/roadDetail';
 
 let App = ()=>{
   return(
@@ -22,6 +23,7 @@ let App = ()=>{
           <Route path="/main/*" element={<Main/>}></Route>
           <Route path="/main/road/list" element={<RoadThumbnail/>}></Route>
           <Route path="/main/road/add/*" element={<Search/>}></Route>
+          <Route path="/main/road/detail" element={<RoadDetail/>}></Route>
           <Route path="/article" element={<Article/>}></Route>
         </Routes>
       </div>

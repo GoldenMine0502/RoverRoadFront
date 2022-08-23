@@ -1,0 +1,179 @@
+.RoadDetail{
+    width:100vw;
+    height:100vh;
+}
+
+.RoadDetail .header{
+    width:100%;
+    height:80px;
+
+    display: flex;
+    align-items: center;
+}
+
+.RoadDetail .header img{
+    margin-left:20px;
+    width:24px;
+}
+
+.RoadDetail .title-box{
+    width:calc(100% - 40px);
+    height:auto;
+
+    padding-top:10px;
+    padding-bottom:20px;
+
+    margin:auto;
+}
+
+.RoadDetail .title-box h2{
+    font-family: 'SUIT';
+    font-size:36px;
+    font-weight:700;
+}
+
+.RoadDetail .title-box .hashtag-list{
+    width:100%;
+    height: auto;
+    margin-top:15px;
+}
+
+.RoadDetail .title-box .hashtag-list p{
+    color:rgba(0, 132, 254, 1);
+    font-family: 'SUIT';
+    font-weight:500;
+    font-size:16px;
+    display: inline-block;
+    margin-right:10px;
+    line-height:22px;
+}
+
+.RoadDetail .image{
+    width:100%;
+    height:auto;
+
+    box-shadow: 10px 5px 5px 5px rgba(80,80,80,0.05);
+}
+
+.RoadDetail .include-box{
+    width:calc(100% - 40px);
+    height:80px;
+
+    margin:auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.RoadDetail .include-box h2{
+    font-family: 'SUIT';
+    font-weight:600;
+    font-size:16px;
+
+    color:rgba(86, 86, 86, 1);
+}
+
+.RoadDetail .include-box p{
+    color:rgba(0, 132, 254, 1);
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:18px;
+}
+
+.RoadDetail .btn-box{
+    width:calc(100% - 40px);
+    height:auto;
+
+    margin:auto;
+    margin-top:10px;
+}
+
+.RoadDetail .btn-box .show-btn{
+    width:100%;
+    height:50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+    background-color: rgba(230, 230, 230, 1);
+    color:rgba(51, 41, 41, 1);
+
+    font-family: 'SUIT';
+    font-weight:800;
+    font-size:16px;
+}
+
+.RoadDetail .btn-box .user-btn-box{
+    width:100%;
+    height:110px;
+
+    margin-top:10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.RoadDetail .btn-box .user-btn-box .info-btn{
+    width:44%;
+    height:70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    background-color: rgba(233, 244, 255, 1);
+    border-radius: 5px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.RoadDetail .btn-box .user-btn-box .info-btn img{
+    width:36px;
+}
+
+.RoadDetail .btn-box .user-btn-box .info-btn h2{
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:16px;
+    color:rgba(0, 132, 254, 1);
+}
+
+.RoadDetail .btn-box .user-btn-box .review-btn{
+    width:44%;
+    height:70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    background-color: rgba(225, 255, 244, 1);
+    border-radius: 5px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.RoadDetail .btn-box .user-btn-box .review-btn img{
+    width:36px;
+}
+
+.RoadDetail .btn-box .user-btn-box .review-btn h2{
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:16px;
+    color:rgba(0, 193, 124, 1);
+}
