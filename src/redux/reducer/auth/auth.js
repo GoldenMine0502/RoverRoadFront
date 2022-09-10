@@ -18,6 +18,8 @@ const authReducer = (state = authState, action)=>{
             return{...state, password:action.payload}
         case SET_NAME:
             return{...state, name:action.payload}
+        default:
+            return state
     }
 }
 
