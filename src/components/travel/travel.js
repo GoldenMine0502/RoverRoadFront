@@ -1,5 +1,8 @@
 import React from 'react';
 
+import TravelList from './module/travelList';
+
+import './travel.css';
 
 let Travel = ()=>{
     return(
@@ -9,8 +12,15 @@ let Travel = ()=>{
             </div>
             <div className='tag-box'>
                 <div className='find'>여행 찾기</div>
-                <div className='place'></div>
+                <div className='line'></div>
+                <select>
+                    
+                </select>
             </div>
+
+            <TravelList/>
         </div>
     );
 }
+
+export default Travel;
