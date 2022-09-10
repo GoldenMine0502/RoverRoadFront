@@ -41,17 +41,13 @@
     cursor:pointer;
 }
 
-.PostBox a{
-    text-decoration: none;
-}
-
-.PostBox a .text-box{
+.PostBox .text-box{
     width:100%;
     height:auto;
 
 }
 
-.PostBox a .text-box h2{
+.PostBox .text-box h2{
     font-family: 'SUIT';
     font-weight:700;
     font-size:24px;
@@ -60,7 +56,7 @@
     margin-left:20px;
 }
 
-.PostBox a .text-box p{
+.PostBox .text-box p{
     width:calc(100% - 40px);
     margin-left:20px;
     font-family: 'SUIT';
@@ -70,12 +66,12 @@
     word-break: keep-all;
 }
 
-.PostBox a .image-box{
+.PostBox .image-box{
     width:100%;
     height:auto;
 }
 
-.PostBox a div img{
+.PostBox div img{
     width:100%;
     margin-top:15px;
     border-radius:0px 0px 5px 5px;

@@ -1,5 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+import { setRoadPopup } from '../../redux/action/popup/popup';
+import { setAutoCreate, setSaveRoad } from '../../redux/action/road/roadThumbnail';
+import api from '../../api/api';
 
 import TripThumbnail from './module/tripThumbnail';
 import AddRoad from './module/addRoad';
@@ -8,12 +12,40 @@ import './road.css';
 import AppBar from '../image/appBar.svg';
 
 let Road = ()=>{
+    const dispatch = useDispatch();
+    const { roadPopup, saveRoadList, autoCreateList } = useSelector((state)=>({
+        roadPopup:state.popup.roadPopup,
+        saveRoadList:state.road.saveRoad,
+        autoCreateList:state.road.autoCreate
+    }));
+    
+    let onAddRoad = ()=>{
+        dispatch(setRoadPopup(true));
+    }
+
+
+    useEffect(()=>{
+        async function setThumbnail(){
+            let data = await api.getUserRoad(window.localStorage.getItem("userToken"));
+            console.log(data);
+            if(data.status == 200){
+                dispatch(setAutoCreate(data.data.autoCreateData));
+                dispatch(setSaveRoad(data.data.saveRoadData))
+            }
+            else if(data == true){
+
+            }
+        }
+
+        setThumbnail();
+    },[])
+
     return(
         <div className='Road'>
             <div className='app-bar'>
-                <Link to="/main/road/add">
-                    <img src={AppBar}/>
-                </Link>
+            
+                <img src={AppBar} onClick={onAddRoad}/>
+            
             </div> 
 
             <div className='title-box'>
@@ -24,23 +56,18 @@ let Road = ()=>{
                 <p>직접 제작한 여행</p>
             </div>
 
-            <TripThumbnail/>
-            <TripThumbnail/>
-            <TripThumbnail/>
-            <TripThumbnail/>
+            {saveRoadList.map((i, index)=>(<TripThumbnail key={index} title={i.name} subtitle={i.subtitle} image={i.thumbnail}></TripThumbnail>))}
 
             <div className='subtitle-box'>
                 <p>자동으로 기록된 여행</p>
             </div>
 
-            <TripThumbnail/>
-            <TripThumbnail/>
-            <TripThumbnail/>
-            <TripThumbnail/>
+            {autoCreateList.map((i, index)=>(<TripThumbnail key={index}></TripThumbnail>))}
 
             <div className='space'></div>
-
-            <AddRoad/>
+            {roadPopup && 
+                <AddRoad></AddRoad>
+            }
         </div>
     );
 }

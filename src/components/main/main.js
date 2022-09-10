@@ -1,5 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Route, Routes} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+import { setId, setAge, setImage, setName, setUserToken } from "../../redux/action/user/user";
+import api from '../../api/api';
 
 import Footer from "../footer/footer";
 import View from './view';
@@ -13,6 +16,26 @@ import Logo from '../image/logo.svg';
 import './main.css';
 
 let Main = ()=>{
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        async function setUserData(){
+            let userToken = window.localStorage.getItem("userToken");
+
+            let data = await api.getUser(userToken);
+            if(data.status == 200){
+                dispatch(setId(data.data.id));
+                dispatch(setAge(data.data.age));
+                dispatch(setImage(data.data.image));
+                dispatch(setName(data.data.name));
+                dispatch(setUserToken(data.data.userToken));
+            }
+            else{
+
+            }
+        }
+
+        setUserData();
+    },[]);
     return(
         <div className="Main">
             <Routes>

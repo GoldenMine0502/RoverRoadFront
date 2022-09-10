@@ -1,4 +1,6 @@
 import React from "react";
+import {useSelector, useDispatch} from 'react-redux';
+import axios from 'axios'
 
 import './mypage.css';
 import Profile from '../image/Profile.png';
@@ -9,19 +11,24 @@ import MypageGuider from '../image/mypageGuider.svg';
 import MypageSetting from '../image/mypageSetting.svg';
 
 let MyPage = ()=>{
+    const {name, id, image} = useSelector((state)=>({
+        name:state.user.name,
+        id:state.user.id,
+        image:state.user.image
+    }));
     return(
         <div className="MyPage">
             <div className="text-box">
                 <h2>좋은 여행되세요,</h2>
-                <h2>김민지님!</h2>
+                <h2>{name}님!</h2>
             </div>
 
             <div className="profile-box">
-                <img className="profile-image" src={Profile}/>
+                <img className="profile-image" src={axios.defaults.baseURL + image}/>
 
                 <div className="profile-text-box">
-                    <h2>김민지</h2>
-                    <p>minji@email.com</p>
+                    <h2>{name}</h2>
+                    <p>{id}@gmail.com</p>
                 </div>
 
                 <img src={Edit}/>

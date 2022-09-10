@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {useSelector} from 'react-redux';
+import axios from 'axios';
 
 import Post from '../../image/post.svg';
 import Road from '../../image/road.svg';
@@ -8,6 +10,10 @@ import MapBlue from '../../image/mapBlue.svg';
 import Profile from '../../image/Profile.png';
 
 let TravelModule = ()=>{
+    const { image } = useSelector((state)=>({
+        image:state.user.image
+    }));
+
     return(
         <div className='PostModule'>
             <Link to="/main/post">
@@ -36,7 +42,7 @@ let TravelModule = ()=>{
             </Link>
             <Link to="/main/my">
                 <div className="content">
-                    <img className="profile" src={Profile}/>
+                    <img className="profile" src={axios.defaults.baseURL + image}/>
                     <p>MY</p>
                 </div>
             </Link>

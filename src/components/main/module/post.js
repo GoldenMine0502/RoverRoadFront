@@ -1,22 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import axios from 'axios';
+import { setNowPostContent, setNowPostImage, setNowPostTitle, setNowPostToken } from '../../../redux/action/post/nowPost';
 
 import PostThumbnail from '../../image/postThumbnail.png';
 import Test from '../../image/asdf.jpg';
 
-let PostBox = ()=>{
-    return(
-        <div className='PostBox'>
-            <Link to="/article">
-                <div className='text-box'>
-                    <h2>지금 바로 떠나자. <br/>인기 휴양지 총집합</h2>
-                    <p>다시는 없을 2022년 여름 휴가! 어디로 가는 것이 가장 좋을까요?</p>
-                </div>
+let PostBox = (props)=>{
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-                <div className='image-box'>
-                    <img src={Test}/>
-                </div>
-            </Link>
+    let onPostClick = ()=>{
+        dispatch(setNowPostContent(props.content));
+        dispatch(setNowPostImage(props.image));
+        dispatch(setNowPostTitle(props.tilte))
+        dispatch(setNowPostToken(props.postToken));
+
+        navigate("/article")
+    }
+    return(
+        <div className='PostBox' onClick={onPostClick}>
+            <div className='text-box'>
+                <h2>{props.title}</h2>
+                <p>{props.subtitle}</p>
+            </div>
+
+            <div className='image-box'>
+                <img src={axios.defaults.baseURL + props.image}/>
+            </div>
+
         </div>
     );
 }

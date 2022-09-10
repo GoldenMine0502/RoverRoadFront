@@ -215,14 +215,19 @@
 
 .Thumbnail{
     width:calc(100% - 40px);
-    height:80px;
+    height:auto;
+
+    padding-top:10px;
+    padding-bottom:10px;
 
     margin:auto;
     margin-top:20px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+
+    border-bottom:1px solid rgba(0, 0, 0, 0.12);
 }
 
 .Thumbnail .thumbnail-time{
@@ -257,6 +262,7 @@
     font-weight:700;
     font-size:15px;
     color:rgba(47, 47, 47, 1);
+    word-break: keep-all;
 }
 
 .Thumbnail .data-box .title-box p{
@@ -272,6 +278,7 @@
     font-weight:500;
     font-size:12px;
     margin-top:10px;
+    word-break: keep-all;
 }
 
 .Thumbnail .data-box .text-box p{

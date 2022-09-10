@@ -14,14 +14,9 @@
     justify-content: flex-end;
 }
 
-.Road .app-bar a{
-    text-decoration: none;
-    margin-right:20px;
-    user-select: none;
-}
-
-.Road .app-bar a img{
+.Road .app-bar img{
     width:40px;
+    margin-right:20px;
 }
 
 .Road .title-box{

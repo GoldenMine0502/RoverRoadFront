@@ -1,6 +1,8 @@
 .Search{
     width:100vw;
     height:100vh;
+
+    overflow-y: auto;
 }
 
 .Search .line{
@@ -61,4 +63,82 @@
     font-family: 'SUIT';
     font-size:14px;
     font-weight:500;
+}
+
+.PlaceList{
+    width:calc(100% - 40px);
+    height:auto;
+
+    padding-top:10px;
+    padding-bottom:10px;
+
+    margin:auto;
+    margin-top:20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border-bottom:1px solid rgba(0, 0, 0, 0.12);
+}
+
+.PlaceList .thumbnail-time{
+    font-size:10px;
+    font-weight:700;
+    font-family: 'SUIT';
+    color:rgba(114, 114, 114, 1);
+
+    margin-right:10px;
+}
+
+.PlaceList .thumbnail-image{
+    width:50px;
+    height:50px;
+    
+    border-radius: 100%;
+}
+.PlaceList .data-box{
+    width:calc(100% - 120px);
+    height:auto;
+
+    margin-left:10px;
+}
+.PlaceList .data-box .title-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.PlaceList .data-box .title-box h2{
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:15px;
+    color:rgba(47, 47, 47, 1);
+    word-break: keep-all;
+}
+
+.PlaceList .data-box .title-box p{
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:13px;
+    color:rgba(255, 158, 89, 1);
+}
+
+.PlaceList .data-box .text-box h2{
+    color:rgba(114, 114, 114, 1);
+    font-family: 'SUIT';
+    font-weight:500;
+    font-size:12px;
+    margin-top:10px;
+    word-break: keep-all;
+}
+
+.PlaceList .data-box .text-box p{
+    font-family: 'SUIT';
+    font-weight:500;
+    font-size:10px;
+    color:rgba(0, 132, 254, 1);
+    word-break: keep-all;
+
+    margin-top:5px;
 }
