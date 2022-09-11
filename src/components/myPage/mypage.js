@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {useSelector, useDispatch} from 'react-redux';
 import axios from 'axios'
 
@@ -11,11 +12,20 @@ import MypageGuider from '../image/mypageGuider.svg';
 import MypageSetting from '../image/mypageSetting.svg';
 
 let MyPage = ()=>{
+    const navigate = useNavigate();
     const {name, id, image} = useSelector((state)=>({
         name:state.user.name,
         id:state.user.id,
         image:state.user.image
     }));
+
+    let onClickTrip = ()=>{
+        navigate("/main/my/trip");
+    }
+
+    let onClickGuide = ()=>{
+        navigate("/main/my/guide");
+    }
     return(
         <div className="MyPage">
             <div className="text-box">
@@ -34,7 +44,7 @@ let MyPage = ()=>{
                 <img src={Edit}/>
             </div>
 
-            <div className="mybox mytrip-box">
+            <div className="mybox mytrip-box" onClick={onClickTrip}>
                 <img src={MypageTravel}/>
                 <p>내가 다녀온 여행</p>
             </div>
@@ -44,7 +54,7 @@ let MyPage = ()=>{
                 <p>저장한 일정</p>
             </div>
 
-            <div className="mybox myguider-box">
+            <div className="mybox myguider-box" onClick={onClickGuide}>
                 <img src={MypageGuider}/>
                 <p>팔로우 중인 가이더</p>
             </div>

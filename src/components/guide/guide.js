@@ -1,11 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import api from '../../api/api';
+import { setGuiderList } from '../../redux/action/html/html';
 
 import GuiderThumbnail from './module/guiderThumbnail';
 
 import './guide.css';
 
 let Guide = ()=>{
+    const dispatch = useDispatch();
+    const { guideList } = useSelector((state)=>({
+        guideList:state.html.guiderList
+    }));
+
+    useEffect(()=>{
+        async function setList(){
+            let data = await api.getGuider();
+            if(data.status == 200){
+                dispatch(setGuiderList(data.data));
+            }
+            console.log(data);
+        }
+
+        setList();
+    }, []);
     return(
         <div className='Guide'>
             <div className='title-box'>
@@ -24,7 +43,9 @@ let Guide = ()=>{
                 </select>
             </div>
 
-            <GuiderThumbnail></GuiderThumbnail>
+            {
+                guideList.map((i, index)=>(<GuiderThumbnail key={index} postLen={i.postLen} location={i.location} name={i.name} image={i.profileImage} guideToken={i.userToken}></GuiderThumbnail>))
+            }
             
         </div>
     );

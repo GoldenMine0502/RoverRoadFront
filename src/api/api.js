@@ -78,5 +78,44 @@ export default{
                 amount:amount
             }
         }).catch((err)=>{return err;});
+    },
+    
+    getGuider(){
+        return axios({
+            method:'GET',
+            url:'/guider'
+        }).catch((err)=>{return err;});
+    },
+
+    getGuiderDetail(guiderToken){
+        return axios({
+            method:'GET',
+            url:'/guider/'+guiderToken
+        }).catch((err)=>{return err;});
+    },
+
+    getGuiderIsFollow(userToken, guiderToken){
+        return axios({
+            method:'POST',
+            url:'/guider/check/follow',
+            data:{
+                userToken:userToken,
+                guideToken:guiderToken
+            }
+        }).catch((err)=>{return err;});
+    },
+
+    getMyTrip(userToken){
+        return axios({
+            method:'GET',
+            url:'/my/trip/'+userToken,
+        }).catch((err)=>{return err;});
+    },
+
+    getMyGuide(userToken){
+        return axios({
+            method:'GET',
+            url:'/my/guide/'+userToken,
+        }).catch((err)=>{return err;});
     }
 }

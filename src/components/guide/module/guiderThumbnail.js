@@ -1,27 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { setNowGuiderToken } from '../../../redux/action/guider/guider';
 
 import '../guide.css';
 import Profile from '../../image/Profile.png';
 
-let GuiderThumbnail = ()=>{
+let GuiderThumbnail = (props)=>{
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const { guiderToken } = useSelector((state)=>({
+        guiderToken:state.guider.guiderToken
+    }));
+
+    
+    let onGuideClick = ()=>{
+        dispatch(setNowGuiderToken(props.guideToken));
+        navigate("/main/guide/detail");
+    }
+
     return(
-        <div className='GuiderThumbnail'>
-           <Link to="/main/guide/detail">
-                <div className='number-box'>
-                    <h2>1</h2>
+        <div className='GuiderThumbnail' onClick={onGuideClick}>
+           
+            <div className='number-box'>
+                <h2>1</h2>
+            </div>
+            <div className='image-box'>
+                <img src={axios.defaults.baseURL + props.image}/>
+            </div>
+            <div className='text-box'>
+                <h2>{props.name}</h2>
+                <div className='text-data-box'>
+                    <p>{props.postLen}개의 여행일정</p>
                 </div>
-                <div className='image-box'>
-                    <img src={Profile}/>
-                </div>
-                <div className='text-box'>
-                    <h2>일장훈</h2>
-                    <div className='text-data-box'>
-                        <p>123개의 여행일정</p>
-                        <p className='follow'>/ 팔로우 중</p>
-                    </div>
-                </div>
-           </Link>
+            </div>
+    
         </div>
     );
 }

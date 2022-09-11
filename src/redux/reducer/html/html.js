@@ -1,13 +1,25 @@
-import { SET_ROAD_THUMBNAIL } from "../../action/html/html";
+import { SET_ROAD_THUMBNAIL, SET_GUIDER_LIST, SET_GUIDER_DETAIL_LIST, SET_MY_TRIP, SET_MY_GUIDE } from "../../action/html/html";
 
 let htmlState = {
-    roadThumbnail:[]
+    roadThumbnail:[],
+    guiderList:[],
+    guiderDetailList:[],
+    myTripList:[],
+    myGuideList:[],
 }
 
 const htmlReducer = (state=htmlState, action)=>{
     switch(action.type){
         case SET_ROAD_THUMBNAIL:
             return{...state, roadThumbnail:action.payload}
+        case SET_GUIDER_LIST:
+            return{...state, guiderList:action.payload}
+        case SET_GUIDER_DETAIL_LIST:
+            return{...state, guiderDetailList:action.payload}
+        case SET_MY_TRIP:
+            return{...state, myTripList:action.payload}
+        case SET_MY_GUIDE:
+            return{...state, myGuideList:action.payload}
         default:
             return state
     }

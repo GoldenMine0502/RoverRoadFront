@@ -1,9 +1,8 @@
 import React from "react";
-import ThumbNail from '../../image/asdf.jpg';
 
-let TripDetail = (props)=>{
+let MyTripDetail = (props)=>{
     return(
-        <div className="TripThumbnail">
+        <div className="MyTripDetail">
             <img src={props.image}/>
             <div className="text-box">
                 <h2>{props.title}</h2>
@@ -13,4 +12,4 @@ let TripDetail = (props)=>{
     );
 }
 
-export default TripDetail;
+export default MyTripDetail;
