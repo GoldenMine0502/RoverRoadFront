@@ -26,6 +26,10 @@ let MyPage = ()=>{
     let onClickGuide = ()=>{
         navigate("/main/my/guide");
     }
+
+    let onClickSave = ()=>{
+        navigate("/main/my/save");
+    }
     return(
         <div className="MyPage">
             <div className="text-box">
@@ -49,7 +53,7 @@ let MyPage = ()=>{
                 <p>내가 다녀온 여행</p>
             </div>
 
-            <div className="mybox mysave-box">
+            <div className="mybox mysave-box" onClick={onClickSave}>
                 <img src={MypageSave}/>
                 <p>저장한 일정</p>
             </div>

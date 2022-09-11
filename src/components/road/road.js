@@ -56,7 +56,7 @@ let Road = ()=>{
                 <p>직접 제작한 여행</p>
             </div>
 
-            {saveRoadList.map((i, index)=>(<TripThumbnail key={index} title={i.name} subtitle={i.subtitle} image={i.thumbnail}></TripThumbnail>))}
+            {saveRoadList.map((i, index)=>(<TripThumbnail key={index} title={i.name} subtitle={i.subtitle} image={i.thumbnail} roadToken={i.makeRoadToken} ></TripThumbnail>))}
 
             <div className='subtitle-box'>
                 <p>자동으로 기록된 여행</p>

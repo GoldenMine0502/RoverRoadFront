@@ -1,4 +1,4 @@
-import { SET_ROAD_THUMBNAIL, SET_GUIDER_LIST, SET_GUIDER_DETAIL_LIST, SET_MY_TRIP, SET_MY_GUIDE } from "../../action/html/html";
+import { SET_ROAD_THUMBNAIL, SET_GUIDER_LIST, SET_GUIDER_DETAIL_LIST, SET_MY_TRIP, SET_MY_GUIDE, SET_ROAD_VIEW, SET_TRAVEL_LIST } from "../../action/html/html";
 
 let htmlState = {
     roadThumbnail:[],
@@ -6,6 +6,8 @@ let htmlState = {
     guiderDetailList:[],
     myTripList:[],
     myGuideList:[],
+    roadViewList:[],
+    travelList:[]
 }
 
 const htmlReducer = (state=htmlState, action)=>{
@@ -20,6 +22,10 @@ const htmlReducer = (state=htmlState, action)=>{
             return{...state, myTripList:action.payload}
         case SET_MY_GUIDE:
             return{...state, myGuideList:action.payload}
+        case SET_ROAD_VIEW:
+            return{...state, roadViewList:action.payload}
+        case SET_TRAVEL_LIST:
+            return{...state, travelList:action.payload}
         default:
             return state
     }

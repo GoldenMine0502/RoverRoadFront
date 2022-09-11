@@ -1,10 +1,15 @@
 import React from "react";
+import {useNavigate} from 'react-router-dom';
 
+let ViewThumbnail = (props)=>{
+    const navigate = useNavigate();
 
-let ThumbNail = (props)=>{
-
+    let onClickThumbnail = ()=>{
+        navigate("/main/road/detail/"+props.roadToken);
+    }
+    
     return(
-        <div className="Thumbnail">
+        <div className="Thumbnail" onClick={onClickThumbnail}>
             {/* <h2 className="thumbnail-time">7:00AM</h2>
              */}
             <img className="thumbnail-image" src={props.image}/>
@@ -26,4 +31,4 @@ let ThumbNail = (props)=>{
     );
 }
 
-export default ThumbNail;
+export default ViewThumbnail;

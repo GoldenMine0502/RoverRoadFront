@@ -1,0 +1,237 @@
+.RoadView{
+    width:100vw;
+    height:100vh;
+    background-color: #fff;
+}
+
+.RoadView .header{
+    width:100vw;
+    height:85px;
+
+    box-shadow: 5px 5px 5px 5px rgb(230,230,230);
+}
+
+.RoadView .header .header-box{
+    width:calc(100% - 40px);
+    height:100%;
+
+    margin:auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.RoadView .header .header-box img{
+    width:26px;
+}
+
+.RoadView .header .header-box h2{
+    font-size:18px;
+    line-height: 18px;
+    font-weight:700;
+    color: rgba(28, 27, 31, 1);
+    font-family: 'SUIT';
+    margin-left:15px;
+    flex:1;
+}
+
+.RoadView .header .header-box p{
+    color:rgba(82, 120, 255, 1);
+    font-size:18px;
+    font-family: 'SUIT';
+    font-weight:700;
+    line-height: 18px;
+    user-select: none;
+}
+
+.RoadView .header .search-box{
+    width:calc(100% - 40px);
+    height:30%;
+
+    margin:auto;
+
+    background-color: rgba(240, 240, 240, 1);
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.RoadView .header .search-box img{
+    margin-left:13px;
+    margin-right:13px;
+    width:24px;
+}
+
+.RoadView .header .search-box input{
+    width:calc(100% - 50px);
+    height:98%;
+
+    font-size:16px;
+    font-weight:500;
+    font-family: 'SUIT';
+    color:rgba(28, 27, 31, 1);
+
+    outline:none;
+    border:none;
+    background-color: rgba(240, 240, 240, 1);
+}
+
+.RoadView .map{
+    margin-top:15px;
+    height:385px;
+}
+
+.RoadView .bottom-bar{
+    width:100%;
+    height:calc(100% - 500px);
+
+    padding-top:20px;
+
+    position: fixed;
+    bottom:0;
+
+    background-color: #fff;
+    border-radius:20px 20px 0 0;
+    box-shadow: 5px 11px 10px 12px rgb(80,80,80);
+
+    z-index: 9999;
+
+    overflow: auto;
+}
+
+.RoadView .bottom-bar .input-box{
+    width:calc(100% - 20px);
+    height:100px;
+
+    margin:auto;
+}
+
+
+.RoadView .bottom-bar .input-box .search-box{
+    width:calc(100% - 20px);
+    height:40px;
+
+    margin:auto;
+    margin-top:5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.RoadView .bottom-bar .input-box .search-box h2{
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:24px;
+    color:rgba(28, 27, 31, 1);
+}
+
+
+.RoadView .bottom-bar .input-box .select-box{
+    width:calc(100% - 20px);
+    height:30px;
+
+    margin:auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.RoadView .bottom-bar .input-box .select-box p{
+    font-family: 'SUIT';
+    font-weight:500;
+    font-size:18px;
+    color:rgba(28, 27, 31, 1);
+}
+
+.RoadView .bottom-bar .line{
+    border-bottom:1px solid rgba(28, 27, 31, 0.15);
+    width:calc(100% - 40px);
+    margin:auto;
+}
+
+.RoadView .bottom-bar .space{
+    width:100%;
+    height:50px;
+}
+
+
+.Thumbnail{
+    width:calc(100% - 40px);
+    height:auto;
+
+    padding-top:10px;
+    padding-bottom:10px;
+
+    margin:auto;
+    margin-top:20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border-bottom:1px solid rgba(0, 0, 0, 0.12);
+}
+
+.Thumbnail .thumbnail-time{
+    font-size:10px;
+    font-weight:700;
+    font-family: 'SUIT';
+    color:rgba(114, 114, 114, 1);
+
+    margin-right:10px;
+}
+
+.Thumbnail .thumbnail-image{
+    width:50px;
+    height:50px;
+    
+    border-radius: 100%;
+}
+.Thumbnail .data-box{
+    width:calc(100% - 120px);
+    height:auto;
+
+    margin-left:10px;
+}
+.Thumbnail .data-box .title-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Thumbnail .data-box .title-box h2{
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:15px;
+    color:rgba(47, 47, 47, 1);
+    word-break: keep-all;
+}
+
+.Thumbnail .data-box .title-box p{
+    font-family: 'SUIT';
+    font-weight:700;
+    font-size:13px;
+    color:rgba(255, 158, 89, 1);
+}
+
+.Thumbnail .data-box .text-box h2{
+    color:rgba(114, 114, 114, 1);
+    font-family: 'SUIT';
+    font-weight:500;
+    font-size:12px;
+    margin-top:10px;
+    word-break: keep-all;
+}
+
+.Thumbnail .data-box .text-box p{
+    font-family: 'SUIT';
+    font-weight:500;
+    font-size:10px;
+    color:rgba(0, 132, 254, 1);
+
+    margin-top:5px;
+}

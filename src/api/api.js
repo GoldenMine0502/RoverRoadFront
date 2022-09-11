@@ -67,6 +67,27 @@ export default{
         }).catch((err)=>{return err;});
     },
 
+    getRoadData(roadToken){
+        return axios({
+            method:'GET',
+            url:'/map/get/'+roadToken
+        }).catch((err)=>{return err;});
+    },
+
+    getRoadThumbnailData(roadToken){
+        return axios({
+            method:'GET',
+            url:'/map/get/thumbnail/'+roadToken
+        }).catch((err)=>{return err;});
+    },
+
+    getRoadDetailData(roadToken){
+        return axios({
+            method:'GET',
+            url:'/map/get/detail/'+roadToken
+        }).catch((err)=>{return err;});
+    },
+
     saveRoad(userToken, name, amount, dataList){
         return axios({
             method:"POST",
@@ -117,5 +138,12 @@ export default{
             method:'GET',
             url:'/my/guide/'+userToken,
         }).catch((err)=>{return err;});
-    }
+    },
+
+    getTravelList(){
+        return axios({
+            method:'GET',
+            url:'/travel',
+        }).catch((err)=>{return err;});
+    },
 }

@@ -13,6 +13,7 @@ import MyPage from "../myPage/mypage";
 import Travel from "../travel/travel";
 import MyTrip from "../myPage/module/trip/myTrip";
 import MyGuide from "../myPage/module/guide/guide";
+import MySave from '../myPage/module/save/save';
 
 import Logo from '../image/logo.svg';
 import './main.css';
@@ -47,7 +48,7 @@ let Main = ()=>{
                 <Route path="/guide/detail" element={<GuideDetail/>}></Route>
                 <Route path="/my/*" element={<MyPage/>}></Route>
                 <Route path="/my/trip" element={<MyTrip/>}></Route>
-                <Route path="/my/save"></Route>
+                <Route path="/my/save" element={<MySave/>}></Route>
                 <Route path="/my/guide" element={<MyGuide/>}></Route>
                 <Route path="/map/*" element={<Travel/>}></Route>
             </Routes>

@@ -27,72 +27,102 @@
     align-items: center;
 
     margin-left:20px;
+    margin-bottom:20px;
 
     overflow-y: auto;
 }
 
+.Travel .tag-box .find{
+    font-family: 'SUIT';
+    font-size:13px;
+    font-weight:600;
+    color:rgba(28, 27, 31, 0.6);
+}
+
+.Travel .tag-box .line{
+    margin-left:8px;
+    margin-right:12px;
+    border-left:2px solid rgba(230, 230, 230, 1);   
+    height:50%;
+}
+
+.Travel .tag-box select{
+    width:125px;
+    height:30px;
+
+    padding-left:5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color:#fff;
+    font-size:14px;
+    font-family: 'SUIT';
+    font-weight:500;
+
+    border-radius: 5px;
+    background-color:#5278FF;
+}
 .TravelList{
     width:calc(100% - 40px);
     height:60px;
+    
+    padding-bottom:10px;
 
     display: flex;
     align-items: center;
 
     margin:auto;
+
+    border-bottom:1px solid rgba(0, 0, 0, 0.12);
 }
 
-.TravelList a{
-    width:100%;
-    height:100%;
-
-    display: flex;
-    align-items: center;
-
-    text-decoration: none;
-}
-
-.TravelList a .number-box{
+.TravelList .number-box{
     width:30px;
     height:30px;
 
     font-family: 'SUIT';
     font-weight:500;
     font-size:13px;
+    color:rgba(126, 154, 255, 1);
+    
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.TravelList a .image-box{
-    width:40px;
-    height:40px;
+.TravelList .image-box{
+    width:46px;
+    height:46px;
 
     display: block;
+    margin-left:15px;
 }
 
-.TravelList a .image-box img{
+.TravelList .image-box img{
     width:100%;
     height:100%;
     display: block;
 }
 
-.TravelList a .text-box{
-    margin-left:10px;
+.TravelList .title-box{
+    margin-left:18px;
 }
 
-.TravelList a .text-box h2{
+.TravelList .title-box h2{
     font-size:16px;
     font-family: 'SUIT';
     font-weight:800;
     color:#000000;
 }
 
-.TravelList a .text-box .text-data-box{
+.TravelList .title-box .text-data-box{
     display: flex;
     margin-top:5px;
 }
 
-.TravelList a .text-box .text-data-box p{
+.TravelList .title-box .text-data-box p{
     font-size:13px;
     font-weight:500;
     font-family: 'SUIT';
@@ -100,6 +130,6 @@
     color:rgba(0, 0, 0, 0.5);
 }
 
-.TravelList a .text-box .text-data-box .follow{
+.TravelList .title-box .text-data-box .follow{
     color:#5278FF;
 }
