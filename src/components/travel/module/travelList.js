@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import '../travel.css';
 import Profile from '../../image/Profile.png';
 
 let TravelList = (props)=>{
+    const navigate = useNavigate();
+
+    let onClick = ()=>{
+        navigate("/main/map/detail/"+props.makeRoadToken);
+    }
     return(
-        <div className='TravelList'>
+        <div className='TravelList' onClick={onClick}>
 
             <div className='number-box'>
                 <h2>{props.index + 1}</h2>

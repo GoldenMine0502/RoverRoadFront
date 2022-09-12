@@ -126,6 +126,28 @@ export default{
         }).catch((err)=>{return err;});
     },
 
+    deleteGuiderFollow(userToken, guideToken){
+        return axios({
+            method:'DELETE',
+            url:'/guider/follow',
+            data:{
+                userToken:userToken,
+                guideToken:guideToken
+            }
+        }).catch((err)=>{return err;});
+    },
+
+    setGuiderFollow(userToken, guideToken){
+        return axios({
+            method:'POST',
+            url:'/guider/follow/user',
+            data:{
+                userToken:userToken,
+                guideToken:guideToken
+            }
+        }).catch((err)=>{return err;});;
+    },
+
     getMyTrip(userToken){
         return axios({
             method:'GET',
@@ -146,4 +168,22 @@ export default{
             url:'/travel',
         }).catch((err)=>{return err;});
     },
+
+    saveTravel(userToken, roadToken){
+        return axios({
+            method:'POST',
+            url:'/travel/save',
+            data:{
+                userToken:userToken,
+                makeRoadToken:roadToken
+            }
+        }).catch((err)=>{return err;});
+    },
+
+    getSaveList(userToken){
+        return axios({
+            method:'GET',
+            url:'/travel/save/'+userToken
+        }).catch((err)=>{return err;});
+    }
 }

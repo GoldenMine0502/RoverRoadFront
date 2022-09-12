@@ -8,6 +8,7 @@ import postReducer from './reducer/post/post';
 import roadReducer from './reducer/road/road';
 import searchReducer from './reducer/search/search';
 import guiderReducer from './reducer/guider/guider';
+import travelReducer from './reducer/travel/travel';
 
 export default configureStore({
     reducer:{
@@ -19,6 +20,7 @@ export default configureStore({
         road:roadReducer,
         search:searchReducer,
         guider:guiderReducer,
+        travel:travelReducer
     },
     devTools:process.env.NODE_ENV !== 'production',
 })

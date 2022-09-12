@@ -3,8 +3,10 @@ export const SET_GUIDER_LIST = "SET_GUIDER_LIST";
 export const SET_GUIDER_DETAIL_LIST = "SET_GUIDER_DETAIL_LIST";
 export const SET_MY_TRIP = "SET_MY_TRIP";
 export const SET_MY_GUIDE = "SET_MY_GUIDE";
+export const SET_MY_SAVE = "SET_MY_SAVE";
 export const SET_ROAD_VIEW = "SET_ROAD_VIEW";
 export const SET_TRAVEL_LIST = "SET_TRAVEL_LIST"
+export const SET_TRAVEL_DETAIL_LIST = "SET_TRAVEL_DETAIL_LIST";
 
 export function setRoadThumbnail(html){
     return{
@@ -41,6 +43,13 @@ export function setMyGuide(html){
     }
 }
 
+export function setMySave(html){
+    return{
+        type:SET_MY_SAVE,
+        payload:html
+    }
+}
+
 export function setRoadView(html){
     return{
         type:SET_ROAD_VIEW,
@@ -51,6 +60,13 @@ export function setRoadView(html){
 export function setTravelList(html){
     return{
         type:SET_TRAVEL_LIST,
+        payload:html
+    }
+}
+
+export function setTravelDetailList(html){
+    return{
+        type:SET_TRAVEL_DETAIL_LIST,
         payload:html
     }
 }

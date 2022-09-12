@@ -4,6 +4,7 @@ export const SET_GUIDER_DETAIL_FOLLOWING = "SET_GUIDER_DETAIL_FOLLOING"
 export const SET_GUIDER_DETAIL_IS_FOLLOW = "SET_GUIDER_DETAIL_IS_FOLLOW";
 export const SET_GUIDER_DETAIL_NAME = "SET_GUIDER_DETAIL_NAME";
 export const SET_GUIDER_DETAIL_IMAGE = "SET_GUIDER_DETAIL_IMAGE";
+export const SET_GUIDER_POPUP = "SET_GUIDER_POPUP";
 
 export function setNowGuiderToken(guiderToken){
     return{
@@ -44,5 +45,12 @@ export function setGuiderDetailImage(image){
     return{
         type:SET_GUIDER_DETAIL_IMAGE,
         payload:image
+    }
+}
+
+export function setGuiderPopup(bool){
+    return{
+        type:SET_GUIDER_POPUP,
+        payload:bool
     }
 }

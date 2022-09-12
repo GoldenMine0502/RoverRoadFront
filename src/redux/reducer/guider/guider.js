@@ -1,4 +1,4 @@
-import { SET_NOW_GUIDER_TOKEN, SET_GUIDER_DETAIL_FOLLOW, SET_GUIDER_DETAIL_FOLLOWING, SET_GUIDER_DETAIL_IMAGE, SET_GUIDER_DETAIL_IS_FOLLOW, SET_GUIDER_DETAIL_NAME } from "../../action/guider/guider";
+import { SET_NOW_GUIDER_TOKEN, SET_GUIDER_DETAIL_FOLLOW, SET_GUIDER_DETAIL_FOLLOWING, SET_GUIDER_DETAIL_IMAGE, SET_GUIDER_DETAIL_IS_FOLLOW, SET_GUIDER_DETAIL_NAME, SET_GUIDER_POPUP } from "../../action/guider/guider";
 
 let guiderState = {
     guiderToken:'',
@@ -6,7 +6,8 @@ let guiderState = {
     following:0,
     name:'',
     image:'',
-    isFollow:false
+    isFollow:false,
+    isPopup:false
 }
 
 const guiderReducer = (state = guiderState, action)=>{
@@ -23,6 +24,8 @@ const guiderReducer = (state = guiderState, action)=>{
             return{...state, isFollow:action.payload}
         case SET_GUIDER_DETAIL_NAME:
             return{...state, name:action.payload}
+        case SET_GUIDER_POPUP:
+            return{...state, isPopup:action.payload}
         default:
             return state
     }

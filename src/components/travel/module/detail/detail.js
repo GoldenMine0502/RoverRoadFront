@@ -2,48 +2,47 @@ import React, { useEffect } from "react";
 import {useNavigate, useParams} from 'react-router-dom';
 import api from '../../../../api/api';
 import {useDispatch, useSelector} from 'react-redux';
-import ViewThumbnail from "../viewThumbnail";
-import { setRoadView } from '../../../../redux/action/html/html';
-import { setViewAmount, setViewName } from "../../../../redux/action/road/roadView";
+import { setTravelAmount, setTravelName } from "../../../../redux/action/travel/travel";
+import { setTravelDetailList } from "../../../../redux/action/html/html";
+import DetailList from "./detailList";
 
 import Arrow from '../../../image/arrowBack.svg';
 import Search from '../../../image/roadThumbnailSearch.svg';
 import Edit from '../../../image/edit.svg'
-import './roadView.css';
+import './detail.css';
 
 const { kakao } = window;
 
-let RoadView = ()=>{
+let TravelDetail = ()=>{
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { roadViewList, name, amount } = useSelector((state)=>({
-        roadViewList:state.html.roadViewList,
-        name:state.road.name,
-        amount:state.road.amount
+    const { travelDetailList, name, amount } = useSelector((state)=>({
+        travelDetailList:state.html.travelDetailList,
+        name:state.travel.name,
+        amount:state.travel.amount
     }));
 
     let { roadToken } = useParams();
 
     useEffect(()=>{
-          
-        async function setRoadViewList(){
+        async function setList(){
             let data = await api.getRoadData(roadToken);
             if(data.status == 200){
-                dispatch(setRoadView(data.data));
+                dispatch(setTravelDetailList(data.data));
             }
         }
 
-        setRoadViewList();
-
-        async function setRoadData(){
+        setList();
+        
+        async function setData(){
             let data = await api.getRoadThumbnailData(roadToken);
             if(data.status == 200){
-                dispatch(setViewAmount(data.data.amount));
-                dispatch(setViewName(data.data.name))
+                dispatch(setTravelName(data.data.name));
+                dispatch(setTravelAmount(data.data.amount));
             }
         }
 
-        setRoadData();
+        setData();
 
         let mapBox = document.getElementById('map');
         let options = {
@@ -56,8 +55,8 @@ let RoadView = ()=>{
 
         async function setMarker(){
             let linePath = new Array();
-            for(let i in roadViewList){
-                geocoder.addressSearch(roadViewList[i].location, function(result, status) {
+            for(let i in travelDetailList){
+                geocoder.addressSearch(travelDetailList[i].location, function(result, status) {
  
                      if (status === kakao.maps.services.Status.OK) {
                 
@@ -90,16 +89,23 @@ let RoadView = ()=>{
     }, [name])
 
     let onBack = ()=>{
-        navigate(-1);
+        navigate(-1)
+    }
+
+    let onSave = async ()=>{
+        await api.saveTravel(window.localStorage.getItem("userToken"), roadToken);
+        navigate("/main/map")
     }
 
     return(
-        <div className="RoadView" id="roadView">
+        <div className="TravelDetail" id="roadView">
             <div className="header">
                 <div className="header-box">
                     <img onClick={onBack} src={Arrow}/>
 
                     <h2>일정 확인하기</h2>
+
+                    <p onClick={onSave}>저장</p>
                 </div>
 
             </div>
@@ -122,7 +128,7 @@ let RoadView = ()=>{
 
                 <div className="line"></div>
 
-                {roadViewList.map((i, index)=>(<ViewThumbnail key={index} name={i.name} image={i.image} star={i.star} description={i.description} roadToken={i.roadToken}></ViewThumbnail>))}
+                {travelDetailList.map((i, index)=>(<DetailList key={index} name={i.name} image={i.image} star={i.star} description={i.description} roadToken={i.roadToken}></DetailList>))}
         
 
                 <div className="space"></div>
@@ -131,4 +137,4 @@ let RoadView = ()=>{
     );
 }
 
-export default RoadView;
+export default TravelDetail;
