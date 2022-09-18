@@ -1,11 +1,18 @@
 import React from "react";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import api from "../../../../api/api";
 
 import Delete from '../../../image/guideDelete.svg';
 
 let MyGuideList = (props)=>{
-    
+    const navigate = useNavigate();
+
+    let onDelete = async ()=>{
+        await api.deleteGuiderFollow(window.localStorage.getItem("userToken"), props.guideToken);
+        navigate(0)
+    }
+
     return(
         <div className='MyGuideList'>
            
@@ -21,7 +28,7 @@ let MyGuideList = (props)=>{
             </div>
 
             <div className="delete-box">
-                <img src={Delete}/>
+                <img src={Delete} onClick={onDelete}/>
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://192.168.0.68:8080";
+axios.defaults.baseURL = "http://192.168.0.9:8080";
 
 export default{
     auth(id, password){
@@ -184,6 +184,17 @@ export default{
         return axios({
             method:'GET',
             url:'/travel/save/'+userToken
+        }).catch((err)=>{return err;});
+    },
+    
+    deleteSave(userToken, makeRoadToken){
+        return axios({
+            method:'DELETE',
+            url:'/my/save',
+            data:{
+                userToken:userToken,
+                makeRoadToken:makeRoadToken
+            }
         }).catch((err)=>{return err;});
     }
 }

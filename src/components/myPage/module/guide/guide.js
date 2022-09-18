@@ -41,7 +41,7 @@ let MyGuide = ()=>{
             </div>
 
             {
-                guideList.map((i, index)=>(<MyGuideList key={index} name={i.name} image={i.profileImage} postLen={i.postLen} ></MyGuideList>))
+                guideList.map((i, index)=>(<MyGuideList key={index} name={i.name} image={i.profileImage} guideToken={i.userToken} postLen={i.postLen} ></MyGuideList>))
             }
         </div>
     );

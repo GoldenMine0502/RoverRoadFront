@@ -40,7 +40,7 @@ let MySave = ()=>{
                 <h2>내가 저장한 여행</h2>
             </div>
 
-            {saveList.map((i, index)=>(<SaveList key={index} image={i.thumbnail} title={i.name} subtitle={i.subtitle}></SaveList>))}
+            {saveList.map((i, index)=>(<SaveList key={index} makeRoadToken={i.makeRoadToken} image={i.thumbnail} title={i.name} subtitle={i.subtitle}></SaveList>))}
         </div>
     );
 }

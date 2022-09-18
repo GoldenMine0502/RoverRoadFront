@@ -79,3 +79,13 @@
     margin-top:5px;
     color:rgba(0, 0, 0, 0.5);
 }
+
+.SaveList .delete-box{
+    width:26px;
+    height:26px;
+}
+
+.SaveList .delete-box img{
+    width:26px;
+    height:26px;
+}
