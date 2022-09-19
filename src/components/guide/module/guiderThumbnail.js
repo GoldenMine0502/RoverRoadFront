@@ -24,7 +24,7 @@ let GuiderThumbnail = (props)=>{
         <div className='GuiderThumbnail' onClick={onGuideClick}>
            
             <div className='number-box'>
-                <h2>{props.index}</h2>
+                <h2>{props.index + 1}</h2>
             </div>
             <div className='image-box'>
                 <img src={axios.defaults.baseURL + props.image}/>
