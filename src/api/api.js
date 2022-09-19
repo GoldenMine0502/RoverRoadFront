@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://192.168.0.9:8080";
+axios.defaults.baseURL = "http://3.21.186.212:8080";
 
 export default{
     auth(id, password){
