@@ -44,7 +44,7 @@ let Guide = ()=>{
             </div>
 
             {
-                guideList.map((i, index)=>(<GuiderThumbnail key={index} postLen={i.postLen} location={i.location} name={i.name} image={i.profileImage} guideToken={i.userToken}></GuiderThumbnail>))
+                guideList.map((i, index)=>(<GuiderThumbnail key={index} index={index} postLen={i.postLen} location={i.location} name={i.name} image={i.profileImage} guideToken={i.userToken}></GuiderThumbnail>))
             }
             
         </div>
