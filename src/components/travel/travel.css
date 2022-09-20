@@ -1,6 +1,7 @@
 .Travel{
     width:100vw;
     height:100vh;
+    overflow-y:auto;
 }
 
 .Travel .text-box{
@@ -9,6 +10,7 @@
     
     display: flex;
     align-items: center;
+
 }
 
 .Travel .text-box h2{
