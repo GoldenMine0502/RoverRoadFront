@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://3.21.186.212:8080";
+axios.defaults.baseURL = "http://goldenmine.kr:8081";
 
 export default{
     auth(id, password){
