@@ -26,7 +26,7 @@ let Login = ()=>{
     }
 
     const authSubmit = async (e)=>{
-        console.log("submitting...");
+        console.log("submitting login...");
         let data = await api.auth(id, password);
         console.log(data);
         if(data.status == 200){
