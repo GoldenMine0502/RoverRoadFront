@@ -36,13 +36,16 @@ let Register = ()=>{
 
     const registerSubmit = async (e)=>{
         console.log("submitting register...");
-        let data = await api.register(id, password, name, age);
-        console.log(data);
-        if(data.status == 200){
-            window.localStorage.setItem("userToken",data.data.userToken);
-            navigate("/")
-        }
-        else{
+        try {
+            let data = await api.register(id, password, name, age);
+            console.log(data);
+            if (data.status == 200) {
+                window.localStorage.setItem("userToken", data.data.userToken);
+                navigate("/")
+            } else {
+                alert("이미 등록된 사용자입니다.")
+            }
+        } catch(ex) {
             alert("이미 등록된 사용자입니다.")
         }
     }
