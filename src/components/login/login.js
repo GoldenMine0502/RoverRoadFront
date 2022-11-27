@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Logo from '../image/logo.svg';
 import './login.css'
+import Arrow from "../image/arrowBack.svg";
 
 let Login = ()=>{
     const dispatch = useDispatch();
@@ -37,11 +38,17 @@ let Login = ()=>{
             alert("올바른 아이디와 패스워드를 입력해주세요")
         }
     }
-    
+
+    const backButtonOnClick = (e) => {
+        navigate("/")
+    }
 
     return(
         <div className='Login'>
             <div className='data'>
+                <div className='arrow-box'>
+                    <img src={Arrow} onClick={backButtonOnClick}/>
+                </div>
                 <div className='logo-box'>
                     <img src={Logo}/>
                 </div>

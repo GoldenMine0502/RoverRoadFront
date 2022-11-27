@@ -34,6 +34,11 @@ let Register = ()=>{
         dispatch(setAge(parseInt(e.target.value)));
     }
 
+
+    const backButtonOnClick = (e) => {
+        navigate("/")
+    }
+
     const registerSubmit = async (e)=>{
         console.log("submitting register...");
         try {
@@ -53,7 +58,7 @@ let Register = ()=>{
     return(
         <div className='Register'>
             <div className='arrow-box'>
-                <img src={Arrow}/>
+                <img src={Arrow} onClick={backButtonOnClick}/>
             </div>
             <div className='title-box'>
                 <h2>ROVER ROAD에 오신 것을<br/>환영합니다!</h2>
