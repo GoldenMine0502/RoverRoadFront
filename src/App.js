@@ -13,6 +13,7 @@ import Search from './components/road/module/search/search';
 import RoadDetail from './components/road/module/detail/roadDetail';
 import RoadView from './components/road/module/roadView/roadView';
 import TravelDetail from './components/travel/module/detail/detail';
+import Personal from "./components/personal/personal";
 
 let App = ()=>{
   return(
@@ -29,6 +30,7 @@ let App = ()=>{
           <Route path="/main/road/detail/:roadToken" element={<RoadDetail/>}></Route>
           <Route path="/main/map/detail/:roadToken" element={<TravelDetail/>}></Route>
           <Route path="/article" element={<Article/>}></Route>
+          <Route path="/personal" element={<Personal/>}></Route>
         </Routes>
       </div>
     </BrowserRouter>
